@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Wisata Pekanbaru</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- driving direction -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link
+        rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+        type="text/css"
+    />
+    <!-- header -->
+    <header>
+        <div class="container-h">
+            <h1><a href="index.html">Wisata PKU</a></h1>
+            <ul>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="food.html">Makanan</a></li>
+                <li><a href="map.html">Peta Wisata</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="map"></div>
+    <nav id="filter-group" class="filter-group"></nav>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

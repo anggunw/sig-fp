@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+}
+/* body fade in */
+.fade-out{
+    opacity: 0;
+}
+.fade-transition{
+    transition-property: opacity;
+    transition-duration: 1.5s;
+}
+/* header */
+header{
+    height: 70px;
+    border-bottom: 2px solid;
+}
+header h1 {
+    display: inline-block;
+	padding:15px 24px;
+    text-transform: uppercase;
+}
+header h1 a{
+    transition: 0.3s;
+}
+header h1 a:hover{
+    color: royalblue;
+}
+header ul{
+    float: right;
+}
+header ul li{
+    padding: 24px;
+    display: inline-block;
+}
+header ul li a{
+    transition: 0.3s;
+}
+header ul li a:hover{
+    color: royalblue;
+}
+.container-h {
+    width: 90%;
+    margin: 0 auto;
+}
+.container-h a.active{
+    font-weight: 900;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+/* section */
+section h3{
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+section h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 2px;
+    background-color: #05386b;
+    left: calc(50% - 60px);
+}
+/* container */
+.container {
+    width: 92%;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.container::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+/* Home */
+.banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.img-main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.indonesia-tourism.com/riau/images/gallery/pekanbaru-city-riau-2.jpg");
+}
+.img-tourist{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.idntimes.com/content-images/community/2018/09/a90670df04d35bc6aca8b9e061c4f9cb.jpg");
+}
+.img-food{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://divinelydelish.files.wordpress.com/2018/12/img_1782_copyright.jpg");
+}
+.banner-text{
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+.banner-text h2{
+    font-size: 80px;
+    color: white;
+}
+.banner-text p{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+.btn {
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.btn:hover{
+    background: rgba(0, 0, 0, 0.9);
+}
+/* hometown */
+iframe{
+    display: block;
+    margin: 0 auto;
+}
+#hometown p{
+    position: relative;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 25px;
+}
+#map h3, #map .container{
+    opacity: 0;
+}
+
+/* card */
+.card{
+    width: 230px;
+    height: 230px;
+    margin: 15px 10px;
+    float: left;
+    padding: 2rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    transform: translateY(-20px);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.food-card::before{
+    background: linear-gradient(to bottom, rgba(229, 83, 0, 0.5), rgba(255, 105, 0, 1));
+}
+.tourist-card::before{
+    background: linear-gradient(to bottom, rgba(0, 176,155,0.5), rgba(150, 201, 61,1));
+}
+.card:hover:before{
+    opacity: 1;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transform: 0.5s all;
+}
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.card .info p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+/* map */
+#map {
+    position: absolute;
+    top: 72px;
+    bottom: 0;
+    width: 100%;
+    height: 100%-70px; 
+}
+.marker {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.mapboxgl-popup-content {
+    max-width: 500px;
+    text-align: center;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+.filter-group {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    z-index: 1;
+    border-radius: 3px;
+    width: 120px;
+    color: rgba(0,0,0,0.75);
+    box-shadow:0 0 0 2px rgba(0,0,0,0.1);
+}
+.filter-group input[type='checkbox']:first-child + label {
+    border-radius: 3px 3px 0 0;
+}
+
+.filter-group label:last-child {
+    border-radius: 0 0 3px 3px;
+    border: none;
+}
+
+.filter-group input[type='checkbox'] {
+    display: none;
+}
+
+.filter-group input[type='checkbox'] + label {
+    background-color: #dbdbdb;
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.7);
+}
+
+.filter-group input[type='checkbox'] + label {
+    background-color: #dbdbdb;
+    text-transform: capitalize;
+}
+.filter-group input[type='checkbox'] + label:hover{
+    background-color: #eee;
+} 
+.filter-group input[type='checkbox']:checked + label {
+    background-color: #fff;
+    color: rgba(0,0,0,0.75);
+}
+.filter-group input[type='checkbox']:checked + label:before {
+    content: '✔';
+    margin-right: 5px;
+}
+/* footer */
+footer{
+    background-color: #333;
+    padding: 30px;
+    text-align: right;
+}
+footer small{
+    color: #fff;
+}
